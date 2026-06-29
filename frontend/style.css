@@ -187,8 +187,6 @@ tr:hover td {
     background-color: rgba(255,255,255,0.02);
 }
 
-
-
 .container-auth {
     max-width: 420px;
     margin: 0 auto;
@@ -305,6 +303,218 @@ tr:hover td {
 }
 
 
+.container-wide {
+    max-width: 1180px;
+    padding: 32px 24px 60px;
+}
+
+.page-head {
+    margin-bottom: 28px;
+}
+
+.part-tag-left {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.page-head h1 {
+    text-align: left;
+    font-size: 28px;
+    justify-content: flex-start;
+}
+
+.page-subtitle {
+    margin: 8px 0 0;
+    color: var(--texto-tenue);
+    font-size: 14px;
+}
+
+.inventory-layout {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 22px;
+    align-items: start;
+}
+
+
+.card-form-panel {
+    position: relative;
+    position: sticky;
+    top: 24px;
+    padding: 22px 22px 20px;
+}
+
+.form-panel-head {
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed var(--borde);
+}
+
+.form-panel-eyebrow {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--naranja-alto);
+    margin-bottom: 6px;
+}
+
+.card-form-panel h2 {
+    font-size: 18px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.input-prefix {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-prefix-symbol {
+    position: absolute;
+    left: 12px;
+    color: var(--texto-tenue);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.input-prefix input {
+    padding-left: 26px;
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.form-actions .btn-secondary {
+    width: 100%;
+}
+
+
+.card-table-panel {
+    padding: 22px 22px 16px;
+}
+
+.table-panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed var(--borde);
+}
+
+.table-panel-head h2 {
+    font-size: 18px;
+}
+
+.table-panel-tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--naranja-alto);
+    border: 1px solid var(--naranja-bajo);
+    padding: 4px 9px;
+    border-radius: 2px;
+}
+
+.table-scroll {
+    overflow-x: auto;
+}
+
+#tabla-repuestos {
+    min-width: 560px;
+}
+
+#tabla-repuestos td:nth-child(1) {
+    font-family: var(--font-mono);
+    color: var(--texto-tenue);
+    font-size: 13px;
+}
+
+#tabla-repuestos td:nth-child(4) {
+    font-family: var(--font-mono);
+    color: var(--naranja-alto);
+}
+
+#tabla-repuestos td:last-child {
+    display: flex;
+    gap: 8px;
+}
+
+#tabla-usuarios td:nth-child(1) {
+    font-family: var(--font-mono);
+    color: var(--texto-tenue);
+    font-size: 13px;
+}
+
+#tabla-usuarios td:last-child {
+    display: flex;
+    gap: 8px;
+}
+
+.role-badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    padding: 3px 8px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    border: 1px solid var(--borde);
+    color: var(--texto-tenue);
+}
+
+.role-badge.role-admin {
+    color: var(--naranja-alto);
+    border-color: var(--naranja-bajo);
+}
+
+.role-badge.role-superadmin {
+    color: var(--rojo-alto);
+    border-color: var(--rojo);
+}
+
+.role-badge.role-user {
+    color: var(--verde);
+    border-color: #1e6b3f;
+}
+
+@media (max-width: 860px) {
+    .inventory-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .card-form-panel {
+        position: static;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-wide {
+        padding: 24px 16px 48px;
+    }
+
+    .page-head h1 {
+        font-size: 22px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 .navbar {
     background-color: var(--panel);
     border-bottom: 1px solid var(--borde);
@@ -398,13 +608,10 @@ tr:hover td {
 }
 
 
-
 body.auth-checking .container {
     opacity: 0.3;
     pointer-events: none;
 }
-
-
 
 @media (max-width: 480px) {
     .navbar {
